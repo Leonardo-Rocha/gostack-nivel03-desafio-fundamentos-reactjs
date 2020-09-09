@@ -17,6 +17,22 @@ export const Container = styled.div<ContainerProps>`
     justify-content: space-between;
 
     nav {
+      .active {
+        position: relative;
+
+        &::after {
+          width: calc(100% -3.2rem);
+          height: 2px;
+          content: '';
+          background: #ff872c;
+          position: absolute;
+          left: 2px;
+          right: 2px;
+          bottom: 0;
+          top: 30px;
+        }
+      }
+
       a {
         color: #fff;
         text-decoration: none;
